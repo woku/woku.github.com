@@ -697,16 +697,17 @@ input[type="submit"]:focus { background:#7cb600; }
 }
 #logo a img {
 	float: left;
-	width: 128px;
-	height: 128px;
+	width: 70px;
+	height: 70px;
+	margin: 30px 0px 30px 20px;
 }
 #tagline {
 	color: #888;
 	border-left: 1px solid #e8e8e8;
-	margin: 0 0 0 20px;
+	margin: 45px 0 0 20px;
 	padding: 5px 0 5px 20px;
 	float: left;
-	font-size: 12px;
+	font-size: 22px;
 }
 #navigation {
 	height: 49px;
@@ -897,4 +898,8 @@ float: left;
 font-size: 31px;
 margin: 8px 0 0 0;
 color: #404040;
+}
+.share-list{
+	margin: 23px 0 13px 0;
+float: right;
 }
