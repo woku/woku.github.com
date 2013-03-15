@@ -962,3 +962,20 @@ line-height: 12px;
 #sub-menu ul li a {
 color: #AAA;
 }
+.page-title h2 {
+font-weight: 400;
+padding: 30px 0;
+float: left;
+}
+.page-title {
+-webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
+box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
+border-bottom: 1px solid #E0E0E0;
+}
+.floated.sidebar.right {
+background: #FCFCFC;
+margin-left: -1px;
+border-left: 1px solid #E0E0E0;
+-webkit-box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, .03),inset 0 2px 0 0 rgba(0, 0, 0, .03);
+box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, .03),inset 0 2px 0 0 rgba(0, 0, 0, .03);
+}
