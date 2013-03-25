@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns:wb=“http://open.weibo.com/wb”>
   <head>
     <meta charset="utf-8">
     <title>广告终结者（Ad Terminator）</title>
@@ -21,7 +21,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
-
+    <!-- weibo follow js-->
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 
   </head>
   <body>
@@ -58,7 +59,6 @@
         </script>
         <!-- Baidu Button END -->
       </div>
-
       <div class="clearfix"></div>
 
     </div><!--six columns end-->
@@ -196,9 +196,10 @@
         <div class="four columns">
           <h4>关注我们</h4>
           <ul class="contact-details-alt">
-            <li><i></i><p><strong>新浪微博</strong>@浏览器插件</p></li>
-            <li><i></i><p><strong>新浪微博</strong>@浏览器插件</p></li>
-            <li><i></i><p><strong>新浪微博</strong>@浏览器插件</p></li>
+            <li><wb:follow-button uid="3263085864" type="red_4" >关注按钮</wb:follow-button></li>
+            <li><i></i><p><strong>腾讯微博</strong><a target="_blank" href="http://t.qq.com/baotianshuai">@浏览器插件</a></p></li>
+            <li><i></i><p><strong>搜狐微博</strong><a target="_blank" href="http://liulanqichajian.t.sohu.com/">@浏览器插件</a></p></li>
+            <li><iframe frameborder="0"  width="150" height="24" src="http://api.t.163.com/friendships/follow_button?style=2&color=grey&user_id=5220114673761504304" scrolling="no"></iframe></li>
           </ul>
         </div>
         <div class="four columns">
