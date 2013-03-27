@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <meta charset="utf-8">
+    <title>广告终结者（Ad Terminator）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="广告终结者可以清除所有网页广告，恶意弹窗，视频广告，跟踪代码，加快网页加载速度">
+    <meta name="keywords" content="广告终结者,广告屏蔽,广告屏蔽插件,屏蔽视频广告,加快网页加载速度">
+
+    <!-- Le styles -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/ico/favicon.png">
+    <!-- weibo follow js-->
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="top-line"></div>
+      <div class="container">
+        <header id="header">
+          <div class="ten columns">
+            <div id="logo">
+              <h1><a href="#"><img src="img/logo.png" alt="广告终结者"></a></h1>
+              <div id="tagline">广告终结者（Ad Terminator）</div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="six columns">
+
+            <!-- Social Icons -->
+
+            <div class="share-list">
+              <!-- Baidu Button BEGIN -->
+              <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                <a class="bds_tsina"></a>
+                <a class="bds_qzone"></a>
+                <a class="bds_tqq"></a>
+                <a class="bds_renren"></a>
+                <a class="bds_t163"></a>
+                <a class="bds_douban"></a>
+                <span class="bds_more">更多</span>
+              </div>
+              <script type="text/javascript" id="bdshare_js" data="type=tools&amp;mini=1&amp;uid=4484801" ></script>
+              <script type="text/javascript" id="bdshell_js"></script>
+              <script type="text/javascript">
+              document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+              </script>
+              <!-- Baidu Button END -->
+            </div>
+            <div class="clearfix"></div>
+            <div class="follow-list">
+              <wb:follow-button uid="3263085864" type="red_1" >关注按钮</wb:follow-button>
+            </div>
+
+          </div><!--six columns end-->
+        </header>
+        <!-- Header End -->
+        <div class="clearfix"></div>
+      </div>
+
+      <nav id="navigation">
+        <div class="left-corner"></div>
+        <div class="right-corner"></div>
+        <ul class="menu" id="responsive">
+          <li><a href="index.html" id="current"><i class="halflings white home"></i> 主页</a></li>
+          <li><a href="#"><i class="halflings white file"></i> 功能介绍</a></li>
+          <li><a href="#"><i class="halflings white file"></i> 下载安装</a></li>
+          <li>
+            <a href="#"><i class="halflings white file"></i> 帮助教程</a>
+            <ul>
+              <li><a href="#">安装教程</a></li>
+              <li><a href="#">如何使用</a></li>
+              <li><a href="#">常见问题</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="halflings white file"></i> 更新历史</a></li>
+          <li>
+            <a href="report.html"><i class="halflings white file"></i> 关于插件</a>
+            <ul>
+              <li><a href="report.html">问题报告</a></li>
+              <li><a href="report.html">意见反馈</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+      <!-- Content
+      ================================================== -->
+      <div id="content">
+
+        <div class="container floated">
+          <div class="sixteen floated page-title">
+            <h2>编写过滤规则</h2>
+          </div>
+        </div>
+        <div class="page-content" style="padding: 40px 0;">
+          <div class="container">
+            <div class="four columns">
+              <div class="wall">
+                <ul>
+                  <li><a href="#introduction">广告终结者过滤规则介绍</a></li>
+                  <li>
+                    <ul style="padding-left: 20px;">
+                      <li><a href="#basic">基本过滤规则</a></li>
+                      <li><a href="#whitelist">定义例外规则</a></li>
+                      <li><a href="#anchors">匹配网址开头/结尾</a></li>
+                      <li><a href="#separators">标记分隔符</a></li>
+                      <li><a href="#comments">注释</a></li>
+                      <li><a href="#advanced">进阶功能</a></li>
+                      <li>
+                        <ul style="padding-left: 40px;">
+                          <li><a href="#options">指定过滤规则选项</a></li>
+                          <li><a href="#regexps">使用正则表达式</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#elemhide">元素隐藏</a></li>
+                  <li>
+                    <ul style="padding-left: 20px;">
+                      <li><a href="#elemhide_basic">基本规则</a></li>
+                      <li><a href="#elemhide_domains">限定在特定域名的规则</a></li>
+                      <li><a href="#elemhide_attributes">属性选择符</a></li>
+                      <li><a href="#elemhide_css">高级选择符</a></li>
+                      <li><a href="#elemhide_exceptions">例外规则</a></li>
+                      <li><a href="#elemhide_simplified">简单元素隐藏语法</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="twelve columns">
+
+
+  <h2 id="introduction">广告终结者过滤规则介绍</h2>
+  <p>本章节描述的过滤规则属性，对偶尔才写过滤规则的用户来说足矣。</p>
+  <h3 id="basic">基本过滤规则</h3>
+  <p>　　最简单的过滤规则当然就是您想阻挡的横幅广告地址，但是这些地址常常会在您每次打开页面时改变。例如： <code>http://example.com/ads/banner123.gif</code>，其中 123 是一个随机数字。在这里阻挡整个图片地址是没用的，您需要创建一条更通用的过滤规则 —— 如 <code>http://example.com/ads/banner*.gif</code>。或者更为通用一些的，如 <code>http://example.com/ads/*</code>。</p>
+
+  <p><em>注</em>：不要使用通配符来代替过多的字符。过滤规则 <code>http://example.com/*</code> 固然可以阻挡所有的横幅广告， 但也会阻挡 example.com 下其它一些您想看的内容。</p>
+
+  <h3 id="whitelist">定义例外规则</h3>
+
+  <p>　　有时您可能会发现某个过滤规则平时挡广告挡得很好，但在某些情况下，会阻挡一些不该挡的内容。您不想移除这条过滤规则，但也不希望它阻挡不该挡的内容。 </p>
+
+  <p>　　这就是例外规则的好处——它们允许您定义过滤规则不被使用的情况。例如，您不满意过滤规则 <code>adv</code> 阻挡了 <code>http://example.com/advice.html</code>，您就可以定义一条例外规则 <code>@@advice</code> 。 例外规则和过滤规则没什么两样，您可以使用通配符或正则表达式。您只需在规则前添加 <code>@@</code> 来声明这是一个例外规则。 </p>
+
+  <p>　　例外规则不止可以处理这些。如果一条例外规则以 http:// 或 https://（也可以在前面加上管线符号（|））开始，这会使所有的页面都是例外。例如：如果您的规则是 <code>@@|http://example.com</code> 您浏览 example.com 的页面时，插件就被禁用了，这将不会阻挡任何东西。</p>
+
+  <h3 id="anchors">匹配网址开头/结尾</h3>
+
+  <p>　　通常插件处理过滤规则时，会自己假设在过滤规则的开头与结尾都有一个通配符，例如，过滤规则 <code>ad</code> 和 <code>*ad*</code> 是一样。 正常情况下这没什么问题，但有时您可能想要定义可以匹配以网址开头或结尾的过滤规则。例如，您想要阻挡所有的 Flash，但如果您添加过滤规则 <code>swf</code> 地址 <code>http://example.com/swf/index.html</code> 同样也将被阻挡。</p>
+
+  <p>　　这个问题的解决方法：使用管线符号（|）来表示地址的最前端或最末端。例如这条过滤规则 <code>swf|</code> 会阻挡 <code>http://example.com/annoyingflash.swf</code> 但不会阻挡 <code>http://example.com/swf/index.html</code>。这条过滤规则 <code>|http://baddomain.example/</code> 会阻挡 <code>http://baddomain.example/banner.gif </code> 但不会阻挡 <code>http://gooddomain.example/analyze?http://baddomain.example</code>。</p>
+
+  <p id="flexible-anchors">　　有时您想阻挡 <code>http://example.com/banner.gif</code> 以及 <code>https://example.com/banner.gif</code> 和 <code>http://www.example.com/banner.gif</code>。这时只需在过滤规则的域名前面加上两个管线符号（||）：<code>||example.com/banner.gif</code> 将会阻挡上面的地址而不会阻挡 <code>http://badexample.com/banner.gif</code> 或者 <code>http://gooddomain.example/analyze?http://example.com/banner.gif</code></p>
+
+  <h3 id="separators">标记分隔符</h3>
+
+  <p>　　通常您需要接受过滤规则的任何分隔符。例如，您可能写这样一个规则阻挡 <code>http://example.com/</code> 和 <code>http://example.com:8000/</code> 但不能阻挡 <code>http://example.com.ar/</code>。在这里，符号(^)用作一个分隔符。 <code>http://example.com^</code></p>
+
+  <p>　　分隔符可以是除了字母、数字或者 _ - . % 之外的任何字符。 这个地址的结尾也是作为一个分隔符，下面的例子中所有的分隔符以红色标记出：http:<b style="color: red;">//</b>example.com<b style="color: red;">:</b>8000<b style="color: red;">/</b>foo.bar<b style="color: red;">?</b>a<b style="color: red;">=</b>12<b style="color: red;">&amp;</b>b<b style="color: red;">=</b>%D1%82%D0%B5%D1%81%D1%82。所以这个地址可以通过这些过滤规则过滤 <code>^example.com^</code> 或 <code>^%D1%82%D0%B5%D1%81%D1%82^</code> 或 <code>^foo.bar^</code> 。</p>
+
+  <h3 id="comments">注释</h3>
+
+  <p>　　任何以感叹号 (!) 开始的规则，都被视为注释。在过滤规则的列表中，仍然会显示这些规则，但会用灰色的字来显示，而不是黑色。插件在判断规则时，会忽略这些注释，所以我们可以写下任何我们想写的东西。您可以在一条规则上面写下这条规则是做什么用的。也可以在过滤列表的上方写上作者信息（大多数过滤列表的作者已经这样做了）。 </p>
+
+  <h3 id="advanced">进阶功能</h3>
+
+  <p>　　本章节描述的特性通常只有高级用户和维护过滤列表的作者才会看。普通用户可跳过。 </p>
+
+  <h4 id="options">指定过滤规则选项</h4>
+
+  <p>　　广告终结者允许您指定某些选项来改变某条规则的行为。您列举这些选项的时候将它们放在美元符号 ($) 后面并用逗号 (,) 分割这些选项，放在过滤规则的最后面，例如：</p>
+
+  <pre>*/ads/*$script,match-case
+</pre>
+
+  <p>　　这里的 <code>*/ads/*</code> 是真实的过滤规则 <code>script</code> 和 <code>match-case</code> 是其指定的选项。下面是目前支持的选项：</p>
+
+  <ul>
+    <li>类型选项：判定过滤规则（或例外规则）过滤元素的类型。过滤规则可以指定多个类型选项来过滤指定的元素类型。可以指定的类型包括：
+      <ul>
+        <li><code>script</code> —— 外部脚本，由 HTML script 标签加载 </li>
+        <li><code>image</code> —— 正常图片，通常由 HTML 的 img 标签所载入 </li>
+        <li><code>stylesheet</code> —— 外部 CSS 样式文件</li>
+        <li><code>object</code> —— 由浏览器插件处理的内容，例如 Flash 或 Java</li>
+        <li><code>xmlhttprequest</code> —— <a href="http://www.w3.org/TR/XMLHttpRequest/">XMLHttpRequest 对象</a></li>
+        <li><code>object-subrequest</code> —— 插件的请求，比如Flash </li>
+        <li><code>subdocument</code> —— 内嵌的页面，通常通过 HTML 的框架方式内嵌</li>
+        <li><code>document</code> —— 网页本身（只适用于 <a href="#whitelist"> 例外规则</a> ）</li>
+        <li><code>elemhide</code> —— 只适用于例外规则，类似于<code>document</code> 但是只禁用页面上的<a href="#elemhide">隐藏规则</a>而不是所有规则</li>
+        <li><code>other</code> —— 其他不在上面的类型的请求 </li>
+      </ul>
+而过时的 <code>background</code>, <code>xbl</code>, 
+      <code>ping</code> 以及 <code>dtd</code> 类型选项则不再使用。
+    </li>
+    <li>反转类型选项：指定过滤规则<strong>不</strong>应用的元素类型。可以指定的类型选项： <code>~script</code>, <code>~image</code>, <code>~stylesheet</code>, <code>~object</code>, <code>~xmlhttprequest</code>, <code>~object-subrequest</code>, <code>~subdocument</code>, <code>~document</code>, <code>~elemhide</code>, <code>~other</code></li>
+    <li>third-party/first-party 请求限制：如果指定了 <code>third-party</code> 选项， 则过滤规则只适用于来源与当前正在浏览的页面的不同的请求。类似地，<code>~third-party</code> 适用于来源与当前浏览页面相同的请求。 </li>
+    <li>域名限定：选项 <code>domain=example.com</code> 指过滤规则只适用于 "example.com" 下的页面 。多个域名可以用 "|" 分隔： 过滤规则 <code>domain=example.com|example.net</code> 将只适用于 "example.com" 或 "example.net" 的页面。如果一个域名是前面有"~"，则该过滤规则<strong>不</strong>适用于这个域名的页面。例如： <code>domain=~example.com</code> 指过滤规则适用于除了 example.com 之外的任何域名的页面而 <code>domain=example.com|~foo.example.com</code> 限定了过滤规则适用于 "example.com" 但不包括 "foo.example.com" 。 </li>
+    <li><code>match-case</code> —— 使过滤规则只适用于匹配地址，例如：过滤规则 <code>*/BannerAd.gif$match-case</code> 会阻挡 <code>http://example.com/BannerAd.gif</code> 但不会阻挡 <code>http://example.com/bannerad.gif</code>。</li>
+    <li><code>collapse</code>&nbsp;— 这个选项将覆盖全局"隐藏已屏蔽元素的占位符"选项，并确保过滤规则总是隐藏这些元素。类似地，<code>~collapse</code> 选项将确保过滤规则不隐藏这些元素。</li>
+    <li>
+      <code>donottrack</code> —— 对有该选项的阻挡规则匹配到且有该选项的例外规则未匹配到的地址会发送一个 
+      <a href="http://donottrack.us/">Do-Not-Track 头</a>  为了向后兼容，使用此选项时建议使用矛盾的组合类型选项，防止此规则在早期版本的 Adblock Plus 中阻挡任何东西：
+      <code>*$donottrack,image,~image</code>
+    </li>
+  </ul>
+
+  <h4 id="regexps">使用正则表达式</h4>
+
+  <p>　　如果您想更好地控制您的过滤规则，什么匹配，什么不匹配，您可以使用正则表达式。例如过滤规则 <code>/banner\d+/</code> 会匹配 <code>banner123</code> 和 <code>banner321</code> 而不会匹配 <code>banners</code>。 您可以查看<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Regular_Expressions#Creating_a_Regular_Expression">正则表达式的文档</a>来学习如何写正则表达式。 </p>
+
+  <p><em>注</em>： 由于性能原因，建议尽可能避免使用正则表达式。 </p>
+
+  <h2 id="elemhide">元素隐藏</h2>
+
+  <h3 id="elemhide_basic">基本规则</h3>
+
+  <p>　　有时您可能会发现无法阻挡某些内嵌在网页中的文字广告。如果查看源码的话，可能发现类似这样的代码： </p>
+
+  <pre>&lt;div class="textad"&gt;
+Cheapest tofu, only here and now!
+&lt;/div&gt;
+&lt;div id="sponsorad"&gt;
+Really cheap tofu, click here!
+&lt;/div&gt;
+&lt;textad&gt;
+Only here you get the best tofu!
+&lt;/textad&gt;
+</pre>
+
+  <p>　　因为您必须下载页面的内容，所以您也必须下载这些广告。对于这种情况，您可以做的就是把这些广告藏起来，这样您就不会看到他们了。这也就是元素隐藏的意义所在。 </p>
+
+  <p>　　上面代码中的第一则广告是在一个 class 属性为“textad”的 div 容器内。过滤规则 <code>##div.textad</code> 。 这里的 ## 表明这是一条元素隐藏规则，剩下的就是定义需要隐藏元素的选择器，同样的，您可以通过他们的 id 属性来隐藏 <code>##div#sponsorad</code> 会隐藏第二个广告。您不需要指定元素的名称， 过滤规则 <code>##*#sponsorad</code> 同样也可以。您也可以仅指定要阻挡的元素名称来隐藏，例如：<code>##textad</code> 可以隐藏第三则广告。</p>
+
+  <p>　　在不查看页面源码的情况下，<a href="/zh_CN/elemhidehelper" hreflang="zh_CN">Element Hiding Helper 扩展</a> 可以帮助选择正确的元素并写出相应的规则。基础的HTML知识还是很有用的。 </p>
+
+  <p><em>注</em>：元素隐藏规则与普通过滤规则的工作方式有很大的差别。元素隐藏规则不支持通配符。 </p>
+
+  <h3 id="elemhide_domains">限定在特定域名的规则</h3>
+
+  <p>　　通常您只想要隐藏特定网站的特定广告，而不希望规则会作用于其他网站。例如，过滤规则 <code>##*.sponsor</code> 可能会把某些网站的有效代码也隐藏了。但如果你把它写成 <code>example.com##*.sponsor</code> 就只会在 <code>http://example.com/</code> 和 <code>http://something.example.com/</code> 生效了，而不是 <code>http://example.org/</code>。 你也可以指定多个域名——只要用逗号（,）分隔即可：<code>domain1.example,domain2.example,domain3.example##*.sponsor</code> 。</p>
+
+  <p>　　如果在域名之前有 "~"，该过滤规则<strong>不</strong>适用于这个域名的页面（需要 AdBlock Plus 1.1或更高版本）。例如， <code>~example.com##*.sponsor</code> 将适用于除了 "example.com" 之外的域名，<code>example.com,~foo.example.com##*.sponsor</code> 适用于 "example.com" 但不适用于 "foo.example.com" 子域名。 </p>
+
+  <p><em>注</em>：由于元素隐藏实现方式的关系，您只可以将隐藏规则限定在完整的域名。您不能使用网址的其他部份，也不可用 <code>domain</code> 代替 <code>domain.example,domain.test</code> 。</p>
+
+  <p><em>注</em>： 限定域名的元素隐藏规则也可用来隐藏浏览器的使用界面。例如，过滤规则 <code>browser##menuitem#javascriptConsole</code> 会隐藏 Firefox 工具菜单中的 JavaScript 控制台。</p>
+
+  <h3 id="elemhide_attributes">属性选择符</h3>
+
+  <p>　　一些广告隐藏起来并不容易——它们广告不仅没有 id 也没有 class 属性。您可以使用其他属性来隐藏，例如 <code>##table[width="80%"]</code> 可以隐藏 width 属性值为 80% 的表格元素。 如果您不想指定属性的完整值，<code>##div[title*="adv"]</code> 会隐藏所有 title 属性包含 adv 字符的 div 元素。您还可以检查属性的开始和结束字符，例如 <code>##div[title^="adv"][title$="ert"]</code> 会隐藏 titile 属性以 adv 开始并且以 ert 结束的 div 元素。正如您所见，你可以使用多个条件 —— <code>table[width="80%"][bgcolor="white"]</code> 会匹配到 width 属性为 80%、bgcolor 属性为 white 的表格元素。 </p>
+
+  <h3 id="elemhide_css">高级选择符</h3>
+
+  <p>　　通常情况下，Firefox 支持的 CSS 选择器都可用于元素隐藏。例如：下面的过滤规则会隐藏 class 的属性为 adheader 的 div 元素相邻的元素： <code>##div.adheader + *</code>。完整的 CSS 列表请查看 <a href="http://www.w3.org/TR/css3-selectors/">W3C CSS 规范</a> （Firefox 目前并没有支持所有的选择器）。</p>
+
+  <p><em>注</em>：这个功能只是给高级用户使用的，您可以很舒服地通过 CSS 选择符去使用它。插件无法检查您添加的选择器的语法是否正确，如果您使用无效的CSS语法，可能会破坏其它已有的有效过滤规则。建议使用 JavaScript 控制台检查是否有 CSS 错误。</p>
+
+<h3 id="elemhide_exceptions">例外规则</h3>
+
+<p>
+　　例外规则的作用是在特定域名中禁用已有的规则。 这对于那些与其他订阅组配合使用，且无法更改该订阅组的作者来说较为有用。 例如，如要让 <code>##div.textad</code> 规则禁用于 <code>example.com</code>，可以使用 
+  <code>example.com#@#div.textad</code>。 这条组合规则就等同于 
+  <code>~example.com##div.textad</code>。 建议您仅在无法调整全局隐藏规则时才使用例外规则，否则请首选限定在特定域名的规则。
+</p>
+
+  <h3 id="elemhide_simplified">简单元素隐藏语法</h3>
+
+  <p>广告终结者支持简单元素隐藏语法（例如：<code>#div(id=foo)</code>）只是为了向后兼容性。使用这个语法是不好的，CSS选择器才是首选。对这个语法的支持可能在以后的某个时间就不支持了。</p>
+
+
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="four columns">
+          <h2 style="color: white;padding: 10px;">广告终结者</h2>
+          <p>清除所有网页广告，恶意弹窗，视频广告，跟踪代码，给你不一样的浏览体验</p>
+        </div>
+        <div class="four columns">
+          <h4>关注我们</h4>
+          <ul class="contact-details-alt">
+            <li><wb:follow-button uid="3263085864" type="red_4" >关注按钮</wb:follow-button></li>
+            <li><i></i><p><strong>腾讯微博</strong><a target="_blank" href="http://t.qq.com/baotianshuai">@浏览器插件</a></p></li>
+            <li><i></i><p><strong>搜狐微博</strong><a target="_blank" href="http://liulanqichajian.t.sohu.com/">@浏览器插件</a></p></li>
+            <li><iframe frameborder="0"  width="150" height="24" src="http://api.t.163.com/friendships/follow_button?style=2&color=grey&user_id=5220114673761504304" scrolling="no"></iframe></li>
+          </ul>
+        </div>
+        <div class="four columns">
+          <h4>相关连接</h4>
+          <ul>
+            <li><a href="">功能介绍</a></li>
+            <li><a href="">安装帮助</a></li>
+            <li><a href="">更新历史</a></li>
+          </ul>
+        </div>
+        <div class="four columns">
+          <h4>声明</h4>
+          <p>该插件永久开源免费，可以访问<a href="https://github.com/woku/AdTerminator">项目地址</a>，获取源码。</p>
+          <p>该插件并非原创，只是对各大广告屏蔽插件进行整合。插件参考了<a href="http://adblockplus.org">Adblock Plus</a>，<a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom?hl=en">Adblock</a>，<a href="http://player.opengg.me/">Open.GG.Cleanplayer</a>等广告屏蔽插件，遵循GNU开源协议。</p>
+        </div>
+      </div>
+    </footer>
+    <footer id="footer-bottom">
+      <div class="container">
+        <!-- Copyrights -->
+        <div class="eight columns">
+          <div class="copyright">
+            © Copyright 2013 by <a href="#">广告终结者</a>. All Rights Reserved.
+          </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="eight columns">
+          <nav id="sub-menu">
+            <ul>
+              <li><a href="#">网站地图</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </footer>
+    <!--disable for debug <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script type="text/javascript">
+      window.jQuery || document.write('<script type="text/javascript" src="js/jquery.min.1.8.3.js">\x3C/script>')
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UUA-38965918-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>
