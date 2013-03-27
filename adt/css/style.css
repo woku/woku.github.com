@@ -1031,6 +1031,9 @@ padding: 40px 0;
 .widget{
 	padding-bottom: 20px;
 }
+.ds-powered-by{
+	display: none;
+}
 @media only screen and (min-width: 960px) {
 	.jcarousel {
 		height: 317px
