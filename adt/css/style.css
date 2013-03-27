@@ -1025,8 +1025,12 @@ padding: 20px;
 -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 }
-
-
+.sidebar, .page-content {
+padding: 40px 0;
+}
+.widget{
+	padding-bottom: 20px;
+}
 @media only screen and (min-width: 960px) {
 	.jcarousel {
 		height: 317px
@@ -1046,9 +1050,7 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 		margin: 0 0 0 28px;
 		padding: 0 56px 0 0
 	}
-	.widget-search input {
-		width: 134px
-	}
+
 	.cut {
 		display: none
 	}
@@ -1060,11 +1062,11 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 	}
 	ol li ol.childlist.comment-des {
 		float: right;
-		width: 70 %
+		width: 70%
 	}
 	.comment-des {
 		float: right;
-		width: 73 %
+		width: 73%
 	}
 	#contact textarea {
 		max-width: 425px;
@@ -1072,10 +1074,10 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 	}
 	.medium-image {
 		margin: 0 25px 0 0;
-		width: 35 %
+		width: 35%
 	}
 	.medium-content {
-		width: 46 %
+		width: 46%
 	}
 	.post.medium {
 		margin: 30px 0
@@ -1103,15 +1105,12 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 	#tagline, .social-icons, .contact-details, .top-search, .slide-caption, #responsive, .left-corner, .right-corner {
 		display: none;
 	}
-	.portfolio-item, .recent-blog {
-		margin: 0 0 40px 0
-	}
 	.js.selectnav {
 		display: block
 	}
 	#navigation {
 		margin: 0;
-		width: 100 % ;
+		width: 100% ;
 		height: auto;
 		background: transparent
 	}
@@ -1138,7 +1137,7 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 		float: left;
 		padding: 0;
 		margin-top: 5px;
-		width: 100 %
+		width: 100%
 	}
 	.icon-box-container {
 		margin: 30px 0 20px 0
@@ -1230,26 +1229,11 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 	}
 	ol li ol.childlist.comment-des {
 		float: right;
-		width: 61 %
+		width: 61%
 	}
 	.comment-des {
 		float: right;
-		width: 67 %
-	}
-	#contact textarea {
-		max-width: 340px;
-		min-width: 340px
-	}
-	.medium-image {
-		margin: 0 25px 0 0;
-		width: 30 %
-	}
-	.medium-content {
-		width: 46 %
-	}
-	.client-list img {
-		width: 179px;
-		height: auto
+		width: 67%
 	}
 }
 @media only screen and (max-width: 479px) {
@@ -1267,33 +1251,16 @@ box-shadow: 0 2px 0 0 rgba(0, 0, 0, .03);
 		width: 260px;
 		padding: 0 30px
 	}
-	.flickr-widget a {
-		width: 69px;
-		height: 69px;
-		margin-right: 9px;
-		margin-bottom: 9px
-	}
 	ol li ol.childlist.comment-des {
 		float: right;
-		width: 47 %
+		width: 47%
 	}
 	.comment-des {
 		float: right;
-		width: 54 %
+		width: 54%
 	}
 	#contact textarea {
 		max-width: 240px;
 		min-width: 240px
-	}
-	.medium-image {
-		margin: 0 25px 0 0;
-		width: 100 %
-	}
-	.medium-content {
-		width: 80 %
-	}
-	.client-list img {
-		width: 260px;
-		height: auto
 	}
 }
