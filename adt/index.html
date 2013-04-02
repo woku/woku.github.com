@@ -20,6 +20,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fpdnjdlbdmifoocedhkighhlbchbiikl">
     <!-- weibo follow js-->
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 
@@ -74,17 +75,17 @@
         <div class="right-corner"></div>
         <ul class="menu" id="responsive">
           <li><a href="index.html" id="current"><i class="halflings white home"></i> 主页</a></li>
-          <li><a href="#"><i class="halflings white file"></i> 功能介绍</a></li>
-          <li><a href="#"><i class="halflings white file"></i> 下载安装</a></li>
+          <li><a href="index.html#feature"><i class="halflings white file"></i> 功能介绍</a></li>
+          <li><a href="index.html#download"><i class="halflings white file"></i> 下载安装</a></li>
           <li>
-            <a href="#"><i class="halflings white file"></i> 帮助教程</a>
+            <a href="help.html"><i class="halflings white file"></i> 帮助教程</a>
             <ul>
-              <li><a href="#">安装教程</a></li>
-              <li><a href="#">如何使用</a></li>
-              <li><a href="#">常见问题</a></li>
+              <li><a href="help.html#install">安装教程</a></li>
+              <li><a href="help.html#use">如何使用</a></li>
+              <li><a href="help.html#problem">常见问题</a></li>
             </ul>
           </li>
-          <li><a href="#"><i class="halflings white file"></i> 更新历史</a></li>
+          <li><a href="#report.html#history"><i class="halflings white file"></i> 更新历史</a></li>
           <li>
             <a href="report.html"><i class="halflings white file"></i> 关于插件</a>
             <ul>
@@ -173,7 +174,7 @@
           <div class="eight"></div>
           <div class="eight sidebar right">
             <ul class="download-list">
-              <li><a href="javascript:;" class="chrome-down">Chrome浏览器版</a></li>
+              <li><a href="javascript:;" onclick="chrome.webstore.install()" class="chrome-down">Chrome浏览器版</a></li>
               <li><a href="javascript:;" class="qihu360sc-down">360安全浏览器版</a></li>
               <li><a href="javascript:;" class="qihu360fast-down">360安全浏览器版</a></li>
               <li><a href="javascript:;" class="firefox-down" title="火狐版即将推出">Firefox浏览器版</a></li>
@@ -186,6 +187,32 @@
         <div class="container" id="feature">
           <div class="sixteen">
             <h2 class="page-title">功能介绍</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="sixteen columns" style="padding: 40px;">
+            <ul style="list-style-type: disc;padding-left: 20px;">
+                <li>过滤网页上的各种类型广告</li>
+                <ul style="list-style-type: circle;padding-left: 20px;">
+                  <li>百度联盟等广告联盟的广告</li>
+                  <li>淘宝，天猫，京东等商城广告</li>
+                  <li>恶意弹窗广告</li>
+                  <li>各种影响网页阅读的浮动广告</li>
+                </ul>
+                <li>屏蔽视频广告</li>
+                <ul style="list-style-type: circle;padding-left: 20px;">
+                  <li>视频片头广告</li>
+                  <li>视频暂停广告</li>
+                  <li>视频下方的小广告</li>
+
+                </ul>
+                <li>提升网页浏览体验</li>
+                <ul style="list-style-type: circle;padding-left: 20px;">
+                  <li>屏蔽广告，网页排版更整齐，更易阅读</li>
+                  <li>屏蔽跟踪代码，防止个人隐私泄露</li>
+                  <li>过滤广告、跟踪代码，网页加载速度更快</li>
+                </ul>
+              </ul>
           </div>
         </div>
 
