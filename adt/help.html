@@ -169,6 +169,10 @@
               <p>插件要访问过滤清单<a href="https://easylist-downloads.adblockplus.org/chinalist+easylist.txt">链接</a>，但是有的公司会对https证书劫持，这时候访问https网站会出现不安全链接，无法更新过滤规则。先手动访问一下订阅规则https://easylist-downloads.adblockplus.org/chinalist+easylist.txt，然后在选项页面上点立即更新</p>
               <h4>为什么视频播放页面一片白色？</h4>
               <p>视频播放要替换原来的视频播放器，如果替换的视频播放器无法加载就会出现白色，视频一直加载不进来，可以尝试访问视频播放器，访问一下<a href="http://haoutil.googlecode.com/svn/trunk/youku/loader.swf">这个</a>链接是否正常，如果无法访问就到问题反馈。</p>
+              <h4>浏览器每次启动时都打开 "广告终结者安装" 的页面</h4>
+              <p>原因: Chrome issue 158709，文件存储损坏导致数据无法保存。解决方法: 卸载并从 Google 网页商店 再安装一遍（这么做会清空所有的 扩展数据从而解决损坏问题）。如果问题仍存在，打开您的 Chrome 数据存储目录（Windows： "%LOCALAPPDATA%\Google\Chrome\User Data\Default"，Linux： ~/.config/google-chrome/Default，Mac OS X： ~/Library/Application Support/Google/Chrome/Default）并删除 "File System"文件夹。 由于该文件夹下的数据已经损坏，因此这么做不会导致更严重的后果。 删除后 Chrome 会重新建立一个目录并正常使用。</p>
+              <h4>360安全浏览器问题</h4>
+              <p>因为360安全浏览器对Chrome内核进行一些改动，可能有一些问题，而且调试困难，可以尝试用360极速浏览器</p>
             </p>
             </div>
           </div>
